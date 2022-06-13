@@ -27,16 +27,21 @@ const navigateCart=()=>
         <hr></hr>
         <div>
             <form>
-                <label>Name of the Patient</label>
+                <label>Name of the Patient:</label>
                 <input type="name" onChange={getdata} value={dt.name} name="name"/><br/>
-                <label>Age</label>
+                <label>Age:</label>
                 <input type="text" /><br/>
-                <label>Gender</label>
+                <label>Gender:</label>
                 <input type="text" /><br/>
-                <label>Address</label>
+                <label>Address:</label>
                 <input type="text" /><br/>
-                <label>Date</label>
+                <label>Date:</label>
                 <input type="date"/><br/>
+                <label>Medical Notes:</label>
+                <input type="textbox"/><br/>
+                <label>Details of Medicine:</label>
+                <input type="text"/><br/>
+
                 </form>
             <button className="btn" onClick={navigateCart}>Click HERE</button>
         </div>

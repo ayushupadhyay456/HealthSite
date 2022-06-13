@@ -9,17 +9,17 @@ const Form = (dt) => {
         <hr></hr>
         <div>
             <form>
-                <label>Name of the Patient</label>
+                <label>Name of the Patient:</label>
                 <input type="name" value={dt.name}/><br/>
-                <label>Age</label>
+                <label>Age:</label>
                 <input type="text" /><br/>
-                <label>Gender</label>
+                <label>Gender:</label>
                 <input type="text" /><br/>
-                <label>Address</label>
+                <label>Address:</label>
                 <input type="text" /><br/>
-                <label>Date</label>
+                <label>Date:</label>
                 <input type="date"/><br/>
-            <label>Doctor's Signature</label>
+            <label>Doctor's Signature:</label>
             <input type="text" /><br/>
                 
             </form>
