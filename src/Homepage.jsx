@@ -2,15 +2,23 @@ import React from 'react'
 import {useNavigate} from 'react-router-dom'
 import './Form.css'
 import Form from './Form'
+import { useState } from 'react'
+
+
 
 
 const Homepage = () => {
+    const [dt,setData]=useState({name:'',age:"",gender:"",address:"",date:""});
+    
     const navigate=useNavigate();
 const navigateCart=()=>
 {
     navigate('/form')
 }
-
+ function getdata(e)
+ {
+    setData(e.target.value)
+ }
   return (
     <div className='main'>
         <h1 align="center">NAME OF THE HOSPITAL</h1>
@@ -20,7 +28,7 @@ const navigateCart=()=>
         <div>
             <form>
                 <label>Name of the Patient</label>
-                <input type="name" name="name"/><br/>
+                <input type="name" onChange={getdata} value={dt.name} name="name"/><br/>
                 <label>Age</label>
                 <input type="text" /><br/>
                 <label>Gender</label>
@@ -29,10 +37,8 @@ const navigateCart=()=>
                 <input type="text" /><br/>
                 <label>Date</label>
                 <input type="date"/><br/>
-
-                
-            </form>
-            <button className="btn-danger" onClick={navigateCart}>Click HERE</button>
+                </form>
+            <button className="btn" onClick={navigateCart}>Click HERE</button>
         </div>
     </div>
   )
